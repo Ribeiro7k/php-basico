@@ -1,4 +1,23 @@
+<?php
+     $servername = "127.0.0.1";
+     $username = "root";
+     $password = "Senai@118";
+     $dbname = "exercicio";
 
+     try {
+        // tenta criar uma conexão com o BD
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        if ($coon->connect_error) {
+            throw new Exception("Falha na conexão: " . $coon->_connect_error);
+        }
+        echo "Conexão realizada com sucesso";
+
+} catch (Exception $e) {
+    // Exibe uma mensagem de erro amigavel
+    echo "Erro ao conectar ao banco de dados." . $conn->connect_error;
+}
+?>
 <!-- Para criar o BD -->
 <!-- CREATE DATABASE exercicio; -->
 
